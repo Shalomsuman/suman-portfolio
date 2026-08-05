@@ -1,0 +1,86 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply font-sans antialiased text-gray-800;
+    background-color: #FCFBF8;
+  }
+
+  ::selection {
+    @apply bg-gold/30 text-teal-900;
+  }
+}
+
+@layer components {
+  .section-container {
+    @apply max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 py-20 md:py-28;
+  }
+
+  .eyebrow {
+    @apply inline-flex items-center gap-2 text-xs md:text-sm font-accent font-semibold tracking-[0.25em] uppercase text-teal-700;
+  }
+
+  .gradient-text {
+    @apply bg-gradient-to-r from-teal-700 via-teal-600 to-gold-dark bg-clip-text text-transparent;
+  }
+
+  .card-hover {
+    @apply transition-all duration-500 hover:shadow-2xl hover:-translate-y-1.5;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full font-semibold text-white
+    bg-gradient-to-r from-teal-600 to-teal-700 shadow-teal
+    transition-all duration-300 hover:shadow-xl hover:brightness-110;
+  }
+
+  .btn-outline {
+    @apply inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full font-semibold
+    text-teal-800 bg-white border border-teal-200 shadow-sm
+    transition-all duration-300 hover:border-teal-600 hover:shadow-lg;
+  }
+
+  .divider-gold {
+    @apply w-16 h-[3px] rounded-full bg-gradient-to-r from-gold to-teal-500;
+  }
+
+  .bg-dot-pattern {
+    background-image: radial-gradient(rgba(13, 148, 136, 0.18) 1.5px, transparent 1.5px);
+    background-size: 26px 26px;
+  }
+
+  .bg-dot-pattern-gold {
+    background-image: radial-gradient(rgba(212, 175, 55, 0.85) 1.6px, transparent 1.6px);
+    background-size: 28px 28px;
+  }
+
+  .shine-sweep {
+    background-image: linear-gradient(105deg, transparent 35%, rgba(255, 255, 255, 0.85) 50%, transparent 65%);
+    background-size: 250% 100%;
+  }
+
+  .frame-corner {
+    @apply absolute w-8 h-8 border-gold/70;
+  }
+
+  .noise-overlay {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+  }
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #f0fdfa;
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #0d9488, #d4af37);
+  border-radius: 999px;
+}
