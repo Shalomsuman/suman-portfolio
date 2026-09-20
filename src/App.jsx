@@ -25,8 +25,9 @@ function App() {
     { id: 'experience', label: 'Experience' },
     { id: 'expertise', label: 'Expertise' },
     { id: 'achievements', label: 'Achievements' },
-    { id: 'contact', label: 'Contact' },
+    { id: 'Resume', label: 'Resume' },
   ]
+  
 
   useEffect(() => {
     const handleScroll = () => {
